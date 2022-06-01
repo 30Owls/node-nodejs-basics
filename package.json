@@ -9,7 +9,8 @@
     "copy": "node src/fs/copy.js",
     "rename": "node src/fs/rename.js",
     "delete": "node src/fs/delete.js",
-    "list": "node src/fs/list.js"
+    "list": "node src/fs/list.js",
+    "read": "node src/fs/read.js"
   },
   "repository": {
     "type": "git",
