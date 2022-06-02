@@ -1,8 +1,13 @@
 import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import path from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export const rename = async () => {
-    let srcFile = './src/fs/files/wrongFilename.txt';
-    let destFile = './src/fs/files/properFilename.md';
+    let srcFile = path.join(__dirname, 'files', 'wrongFilename.txt');
+    let destFile = path.join(__dirname, 'files', 'properFilename.md');
 
     fs.access(srcFile, fs.constants.F_OK, (err) => {
         if(err){
