@@ -1,9 +1,9 @@
 import fs from 'fs';
-import { fileURLToPath } from 'url'
-import path from 'path'
-import { dirname } from 'path'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+import { fileURLToPath } from 'url';
+import path from 'path';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 export const copy = async () => {
     let srcDir = path.join(__dirname, 'files');
