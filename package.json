@@ -12,7 +12,7 @@
     "list": "node src/fs/list.js",
     "read": "node src/fs/read.js",
     "env": "node src/cli/env.js",
-    "args": "node src/cli/args.js --"
+    "args": "node src/cli/args.js"
   },
   "repository": {
     "type": "git",
