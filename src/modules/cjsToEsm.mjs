@@ -33,6 +33,7 @@ console.log(`Path to current directory is ${__dirname}`);
 
 
 const createMyServer = createServerHttp((_, res) => {
+    res.writeHead(200);
     res.end('Request accepted');
 });
 const HOST = 'localhost';
