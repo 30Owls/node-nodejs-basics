@@ -12,7 +12,9 @@
     "list": "node src/fs/list.js",
     "read": "node src/fs/read.js",
     "env": "node src/cli/env.js",
-    "args": "node src/cli/args.js"
+    "args": "node src/cli/args.js",
+    "cjsToEsm": "node src/modules/cjsToEsm.mjs",
+    "calcHash": "node src/hash/calcHash.js"
   },
   "repository": {
     "type": "git",

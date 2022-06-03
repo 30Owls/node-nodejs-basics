@@ -12,7 +12,7 @@ export const calculateHash = async () => {
 
     fs.readFile(fileToHash, 'utf-8', (err, data) => {
         if (err) {
-            throw new Error('FS operation failed');
+            console.log("Error: " + err)
         }
         let hashed = crypto.createHash('sha256').update(fileToHash).digest('hex');
         console.log(hashed)
