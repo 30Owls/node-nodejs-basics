@@ -7,9 +7,9 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 import moduleA from './files/a.json' assert { type: 'json' };
 import moduleB from './files/b.json' assert { type: 'json' };
-import cModule from './files/c.js';
+import moduleC from './files/c.js';
 
-cModule()
+moduleC()
 
 
 const random = Math.random();
@@ -21,7 +21,6 @@ if (random > 0.5) {
 } else {
     unknownObject = moduleB
 }
-console.log(`random: ${random}`)
 console.log(unknownObject)
 
 console.log(`Release ${release()}`);
@@ -31,8 +30,15 @@ console.log(`Path segment separator is "${path.sep}"`);
 console.log(`Path to current file is ${__filename}`);
 console.log(`Path to current directory is ${__dirname}`);
 
+
+
 const createMyServer = createServerHttp((_, res) => {
     res.end('Request accepted');
+});
+const HOST = 'localhost';
+const PORT = 8080;
+createMyServer.listen(PORT, HOST, () => {
+    console.log(`Server is running on http://${HOST}:${PORT}`);
 });
 
 export { unknownObject, createMyServer}
