@@ -1,5 +1,5 @@
 import fs from 'fs';
-const { stdin, stdout } = process;
+import { stdin } from 'process';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 import path from 'path';
